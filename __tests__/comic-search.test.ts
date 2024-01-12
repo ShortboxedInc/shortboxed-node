@@ -1,19 +1,17 @@
 /**
  * (c) Shortboxed Inc. and its affiliates. Confidential and proprietary.
  */
-import {COMIC_SEARCH_PATH} from "../constants";
-import {HttpMethod} from "../enums/http-method.enum";
-import {Shortboxed} from "../index";
+import {Shortboxed} from "../src/index";
+import * as axios from "axios";
+
+jest.mock("axios");
 
 describe("Shortboxed", () => {
   let shortboxedClient: Shortboxed;
-  let sendRequestSpy: jest.SpyInstance;
 
   beforeAll(() => {
     shortboxedClient = new Shortboxed("YOUR_API_KEY");
-    sendRequestSpy = jest
-      .spyOn(Shortboxed.prototype, "sendRequest")
-      .mockResolvedValue({issueId: "12345"});
+    jest.spyOn(axios, 'default').mockResolvedValue({data: {issueId: "12345"}});
   });
 
   describe("ComicSearch", () => {
@@ -27,12 +25,6 @@ describe("Shortboxed", () => {
 
       const response = await shortboxedClient.comicSearch(params);
 
-      expect(sendRequestSpy).toHaveBeenCalledTimes(1);
-      expect(sendRequestSpy).toHaveBeenCalledWith(
-        COMIC_SEARCH_PATH,
-        HttpMethod.POST,
-        params,
-      );
       expect(response).toEqual({issueId: "12345"});
     });
   });

@@ -2,7 +2,7 @@
  * (c) Shortboxed Inc. and its affiliates. Confidential and proprietary.
  */
 module.exports = {
-    "collectCoverageFrom": ["**/*.(t|j)s"],
+    "collectCoverageFrom": ["src/**/*.ts"],
     "coverageDirectory": "./coverage",
     "detectLeaks": true,
     "moduleFileExtensions": ["js", "json", "ts"],
