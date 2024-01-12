@@ -15,7 +15,7 @@ const shortboxed = new Shortboxed("YOUR_API_KEY");
 const response = await shortboxed.comicSearch({
     title: "Amazing Spider-man",
     issueNumber: "1",
-    year: 1962,
+    year: 1963,
     publisher: "Marvel Comics"
 });
 
