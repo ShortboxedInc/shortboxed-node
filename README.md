@@ -1,4 +1,4 @@
-[![Push Tests](https://github.com/ShortboxedInc/shortboxed-node/actions/workflows/test.yml/badge.svg)](https://github.com/ShortboxedInc/shortboxed-node/actions/workflows/test.yml)
+[![Push Tests](https://github.com/ShortboxedInc/shortboxed-node/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ShortboxedInc/shortboxed-node/actions/workflows/test.yml)
 
 # shortboxed-node
 Node SDK for accessing Shortboxed's API.
