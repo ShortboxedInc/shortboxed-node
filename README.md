@@ -1,5 +1,5 @@
 # shortboxed-node
-Node SDK for accessing Shortboxed's API
+Node SDK for accessing Shortboxed's API.
 
 ## Installation
 
@@ -10,6 +10,8 @@ npm install shortboxed-node
 ## Usage
 
 ```javascript
+import {Shortboxed} from 'shortboxed-node';
+
 const shortboxed = new Shortboxed("YOUR_API_KEY");
 
 const response = await shortboxed.comicSearch({

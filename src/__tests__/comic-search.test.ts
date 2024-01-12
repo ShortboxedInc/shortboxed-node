@@ -13,7 +13,7 @@ describe("Shortboxed", () => {
     shortboxedClient = new Shortboxed("YOUR_API_KEY");
     sendRequestSpy = jest
       .spyOn(Shortboxed.prototype, "sendRequest")
-      .mockResolvedValue({issueId: "12354"});
+      .mockResolvedValue({issueId: "12345"});
   });
 
   describe("ComicSearch", () => {
@@ -25,7 +25,7 @@ describe("Shortboxed", () => {
         year: 1963,
       };
 
-      await shortboxedClient.comicSearch(params);
+      const response = await shortboxedClient.comicSearch(params);
 
       expect(sendRequestSpy).toHaveBeenCalledTimes(1);
       expect(sendRequestSpy).toHaveBeenCalledWith(
@@ -33,6 +33,7 @@ describe("Shortboxed", () => {
         HttpMethod.POST,
         params,
       );
+      expect(response).toEqual({issueId: "12345"});
     });
   });
 });
