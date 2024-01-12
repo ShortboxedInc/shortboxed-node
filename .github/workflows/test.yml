@@ -16,15 +16,5 @@ jobs:
           node-version: "18.x"
       - run: npm ci --ignore-scripts
       - run: npm run test
-      - run: npm run coverage
-      - run: npm i coverage-badges-cli -g
-      - run: coverage-badges --output coverage/badges.svg
-
-      - name: Deploy Coverage Badge
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/master'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./coverage
 
   
