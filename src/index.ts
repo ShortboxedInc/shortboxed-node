@@ -33,7 +33,7 @@ export class Shortboxed {
     })
       .then(res => (response = res.data))
       .catch(error => {
-        throw new Error(error);
+        throw error;
       });
 
     return response as TResponse;

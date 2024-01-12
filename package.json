@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "make-badges": "coverage-badges",
     "build": "tsc",
     "lint": "eslint \"src/**/*.ts\" --fix"
   },
@@ -23,6 +25,7 @@
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.0",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "coverage-badges-cli": "^1.2.5",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-header": "^3.1.1",

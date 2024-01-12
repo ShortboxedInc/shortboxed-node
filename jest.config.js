@@ -4,6 +4,7 @@
 module.exports = {
     "collectCoverageFrom": ["src/**/*.ts"],
     "coverageDirectory": "./coverage",
+    "coverageReporters": ["json-summary"],
     "detectLeaks": true,
     "moduleFileExtensions": ["js", "json", "ts"],
     "rootDir": "./",
