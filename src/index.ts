@@ -10,7 +10,7 @@ import axios from "axios";
 export class Shortboxed {
   constructor(private apiKey: string) {}
 
-  private async sendRequest<TRequest, TResponse>(
+  async sendRequest<TRequest, TResponse>(
     path: string,
     httpMethod: HttpMethod,
     data: TRequest,
