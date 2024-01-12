@@ -10,7 +10,7 @@ npm install shortboxed-node
 ## Usage
 
 ```javascript
-const shortboxed = new Shortboxed("YOU_API_KEY");
+const shortboxed = new Shortboxed("YOUR_API_KEY");
 
 const response = await shortboxed.comicSearch({
     title: "Amazing Spider-man",
