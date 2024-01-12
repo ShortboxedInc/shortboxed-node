@@ -20,7 +20,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run coverage
       - run: npm i coverage-badges-cli -g
-      - run: coverage-badges --output coverage/badges.svg
+      - run: coverage-badges --output coverage/badge.svg
 
       - name: Deploy Coverage Badge
         uses: peaceiris/actions-gh-pages@v3
@@ -28,6 +28,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./coverage
-          publish_branch: main
+          
 
   
