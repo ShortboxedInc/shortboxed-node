@@ -1,5 +1,5 @@
 [![Push Tests](https://github.com/ShortboxedInc/shortboxed-node/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ShortboxedInc/shortboxed-node/actions/workflows/test.yml)
-[![Push Tests](./coverage/badge.svg?branch=gh-pages)](https://github.com/ShortboxedInc/shortboxed-node/actions/workflows/coverage.yml)
+![Coverage](https://raw.githubusercontent.com/ShortboxedInc/shortboxed-node/4750f57098defdcf7867908411aa443b813caf3e/badges.svg)
 
 # shortboxed-node
 Node SDK for accessing Shortboxed's API.
